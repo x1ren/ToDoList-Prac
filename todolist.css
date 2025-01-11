@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#Container {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 500px;
+    max-height: 80vh; /* Added max-height */
+    display: flex;
+    flex-direction: column;
+}
+
+#Header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+#Header h1 {
+    color: #2c3e50;
+    font-size: 2rem;
+}
+
+#Action {
+    margin-bottom: 1.5rem;
+}
+
+#Action label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #555;
+    font-weight: 500;
+}
+
+#Action input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+#Action input:focus {
+    outline: none;
+    border-color: #3498db;
+}
+#Lists li {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.todo-actions {
+    display: flex; 
+    gap: 0; 
+    align-items: center;
+}
+#Button {
+    margin-bottom: 2rem;
+}
+.delete{
+    margin: 0;
+    padding: 5px 10px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.delete-btn:hover {
+    background-color: #ff3333;
+}
+.done{
+    margin: 0;
+    padding: 5px 10px;
+    background-color: #4df6ff;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.done-btn:hover {
+    background-color: #4df6ff;;
+}
+
+#submit {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#submit:hover {
+    background-color: #2980b9;
+}
+
+#Lists {
+    border-top: 1px solid #eee;
+    padding-top: 1.5rem;
+    overflow-y: auto; /* Added scroll */
+    max-height: 400px; /* Added max-height */
+}
+
+#actions {
+    list-style: none;
+}
+
+#actions li {
+    background-color: #81b6eb;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.2s ease;
+}
+
+#actions li:hover {
+    transform: translateX(5px);
+}
+
+/* Styling the scrollbar */
+#Lists::-webkit-scrollbar {
+    width: 8px;
+}
+
+#Lists::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+#Lists::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 4px;
+}
+
+#Lists::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
+@media (max-width: 480px) {
+    #Container {
+        width: 95%;
+        padding: 1.5rem;
+        max-height: 90vh;
+    }
+    
+    #Header h1 {
+        font-size: 1.5rem;
+    }
+
+    #Lists {
+        max-height: 300px; 
+    }
+}
